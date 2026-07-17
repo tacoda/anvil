@@ -20,6 +20,9 @@ examples/
 │   ├── accessibility.md         # a11y rule scoped to .tsx
 │   └── testing.md               # test rule scoped to src/
 │
+├── orchestration/  # Real orchestrator (→ orchestration/orchestrate.md.template)
+│   └── invitation-service-orchestrator.md  # Parent delegates to the 3 agents below
+│
 ├── plans/          # Real plan instance (→ orchestration/migration-plan.md.template)
 │   └── migration-flat-to-layered.md  # 5-phase Express refactor to layered arch
 │
@@ -45,7 +48,8 @@ examples/
     └── README.md
 ```
 
-The three layered agents (`data-layer` → `business-logic` → `api-layer`) and the
-`invitation-service` spec are designed to be read together — they show one feature
-built by sequential subagent delegation (see `orchestration/orchestrate.md.template`).
-The `pagination-util` spec drives the loop in `orchestration/ralph/`.
+The `invitation-service` spec, the three layered agents (`data-layer` →
+`business-logic` → `api-layer`), and `orchestration/invitation-service-orchestrator.md`
+are designed to be read together — they show one feature built by sequential
+subagent delegation. The `pagination-util` spec drives the loop in
+`orchestration/ralph/`.
