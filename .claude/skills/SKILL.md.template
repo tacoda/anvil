@@ -1,0 +1,59 @@
+# Skill: [SKILL NAME]
+
+> Encodes domain expertise so Claude produces consistently good output in one
+> area. See `docs/SKILL_AUTHORING_GUIDE.md` for the full method, and
+> `frontend-design.md` / `api-design.md` for complete examples.
+
+## Purpose
+
+One paragraph: what this skill helps with, and when to activate it.
+
+Trigger conditions:
+- [e.g., "When creating React components"]
+- [e.g., "When the user asks for UI work"]
+
+## Principles
+
+Start with 5-7 core principles. For each: what to do, and why.
+
+1. **[Principle name]**: [what to do and why]
+2. **[Principle name]**: [what to do and why]
+3. **[Principle name]**: [what to do and why]
+
+## Implementation Patterns
+
+### Pattern 1: [description]
+[When and why to use it.]
+
+```[lang]
+// Good: [what this demonstrates]
+```
+
+### Pattern 2: [description]
+
+```[lang]
+// Good: [what this demonstrates]
+```
+
+## Anti-Patterns to Avoid
+
+- **[Anti-pattern]**: [why it's bad, what to do instead]
+- **[Anti-pattern]**: [why it's bad, what to do instead]
+
+## Checklist
+
+- [ ] [Verifiable quality check]
+- [ ] [Verifiable quality check]
+- [ ] [Verifiable quality check]
+
+## When to Apply
+
+- [Scenario]
+- [Scenario]
+
+**Not for:** [scenarios where this skill doesn't apply]
+
+## Success Metrics
+
+- [How you'll know the output succeeded]
+- [How you'll know the output succeeded]

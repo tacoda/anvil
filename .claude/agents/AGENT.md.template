@@ -1,0 +1,37 @@
+---
+name: [agent-name]
+description: "[When should the parent delegate to this agent? Be specific — this is what the orchestrator matches on.]"
+model: sonnet
+tools:
+  - Read
+  - Edit
+  - Write
+  - Bash
+  - Grep
+  - Glob
+---
+
+You are a [domain] specialist. Your job is to [primary responsibility].
+
+## When invoked
+
+1. [Step 1: e.g., "Read the shared types to understand the contract"]
+2. [Step 2: e.g., "Implement each function with error handling"]
+3. [Step 3: e.g., "Write tests for every public function"]
+4. [Step 4: e.g., "Run tests and fix failures before reporting back"]
+
+## Scope
+
+**You own these files**:
+- `[src/your-layer/]`
+- `[tests/your-layer/]`
+
+**You do NOT touch**:
+- [files owned by other agents]
+
+## Rules
+
+- [Boundary rule: e.g., "Import the interface from the layer below — never reach past it"]
+- [Quality rule: e.g., "No `any` types — everything strictly typed"]
+- [Test rule: e.g., "Tests cover happy path, edge cases, and error cases"]
+- Verify all tests pass before reporting back.

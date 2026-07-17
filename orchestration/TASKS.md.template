@@ -1,0 +1,77 @@
+# [PROJECT] — Task Board (Parallel Swarm)
+
+> Shared coordination file for independent agents working in parallel. Each
+> agent owns a lane; conventions keep the output consistent; git is the sync
+> point. Use when work splits into truly independent streams.
+
+## Task Assignments
+
+### Agent A: [Lane name]
+- [ ] [Task]
+- [ ] [Task]
+
+**Expected Commits**:
+- `feat: [thing]`
+
+### Agent B: [Lane name]
+- [ ] [Task]
+- [ ] [Task]
+
+**Expected Commits**:
+- `feat: [thing]`
+
+### Agent C: [Testing & Docs]
+- [ ] [Unit tests for all components, target [85%]+ coverage]
+- [ ] [Docs / examples]
+
+**Expected Commits**:
+- `test: [thing]`
+- `docs: [thing]`
+
+---
+
+## Conventions (All Agents MUST Follow)
+
+### File Organization
+- [Each unit in its own file: `[src/.../${Name}.ext]`]
+- [Tests mirror src: `[tests/.../${Name}.test.ext]`]
+
+### Code Style
+- [Language + strict mode]
+- [Export style, component style, state approach]
+
+### Testing
+- [Framework]
+- [Minimum coverage per unit]
+- [Required cases: render, interaction, edge, error]
+
+### Commits
+- One logical change per commit.
+- Descriptive messages: `feat: X with Y`.
+
+---
+
+## Completed
+- [x] [Project setup]
+- [x] [Shared types / directory structure]
+
+## In Progress
+- [ ] **Agent A**: [lane]
+- [ ] **Agent B**: [lane]
+- [ ] **Agent C**: [lane]
+
+## Blocked / Issues
+(None yet.)
+
+---
+
+## Coordination Protocol
+
+Agents:
+- Glance at `TASKS.md` every ~30 min for changes.
+- Check `git log --oneline -10` every ~15-30 min to see others' work.
+- Update this file + commit after finishing a unit.
+
+Team lead:
+- Review progress every ~30 min; run `git log`.
+- Resolve blockers/conflicts; keep `TASKS.md` current.

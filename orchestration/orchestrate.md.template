@@ -1,0 +1,63 @@
+# Orchestration: [FEATURE NAME]
+
+> Parent-agent script for sequential subagent delegation. Use when a feature
+> splits cleanly into layers/concerns that build on each other. Pair with agent
+> definitions in `.claude/agents/`.
+
+## Your Role
+
+You are the parent agent. Your job is NOT to implement the feature yourself.
+Instead:
+1. Delegate each layer to the appropriate specialist subagent.
+2. Collect and verify each subagent's report.
+3. Run integration tests at the end.
+4. Commit the complete feature.
+
+## The Feature
+
+See `[specs/feature.md]` for the full spec.
+
+**TL;DR**: [one-sentence description]
+
+## Subagents
+
+Defined in `.claude/agents/`:
+
+| Subagent | File | Responsibility |
+|----------|------|----------------|
+| `[data-layer]` | `.claude/agents/[data-layer].md` | [Repository / CRUD] |
+| `[business-logic]` | `.claude/agents/[business-logic].md` | [Service / validation] |
+| `[api-layer]` | `.claude/agents/[api-layer].md` | [Routes / HTTP] |
+
+## Execution Order
+
+### Step 1: [Data layer] — use the `[data-layer]` subagent
+Delegate: read the spec + shared types, implement `[src/.../repository.ts]`, run
+tests. Wait for completion; verify the report.
+
+### Step 2: [Business logic] — use the `[business-logic]` subagent
+Delegate: read the interface from Step 1, implement `[src/.../service.ts]` with
+validation, run tests. Wait; verify.
+
+### Step 3: [API layer] — use the `[api-layer]` subagent
+Delegate: read the interface from Step 2, implement `[src/.../routes.ts]`, run
+tests. Wait; verify.
+
+### Step 4: Integration — you, the parent
+Run the full suite:
+```bash
+[npm test]
+```
+All tests must pass. Then commit:
+```bash
+git add -A
+git commit -m "feat: [feature] via subagent coordination"
+```
+
+## Key Principles
+
+1. **Clear scope**: each subagent knows exactly which files it owns.
+2. **Shared contract**: the types file is the interface between layers.
+3. **Sequential delegation**: each layer builds on the previous.
+4. **Integration at the end**: the parent runs the full suite.
+5. **Minimal context**: give each specialist only its brief + the types file.

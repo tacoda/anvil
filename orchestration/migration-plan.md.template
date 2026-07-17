@@ -1,0 +1,105 @@
+# Migration Plan: [OLD STATE] → [NEW STATE]
+
+> Multi-phase plan for a large refactor or migration. Each phase is small,
+> committed independently, and reversible. The agent works one phase at a time.
+
+## Executive Summary
+
+**Current State**: [what exists now and why it hurts]
+
+**Target State**: [what it should become]
+
+**Migration Time**: [estimate]
+
+**Risk Level**: [Low / Medium / High] (rollback at each phase boundary)
+
+---
+
+## Phase 0: Current State Analysis
+
+### Problems
+- [Problem with the current design]
+- [Problem]
+
+### Pain Points
+1. [Concrete pain, e.g. "handlers are 40+ lines each"]
+2. [Concrete pain]
+
+---
+
+## Phase 1: [Scaffold / first safe step]
+
+**Goal**: [what this phase achieves — no behavior change yet].
+
+### What to Create / Change
+- [File / structure]
+- [Types / interfaces]
+
+### What Stays the Same
+- [Old code keeps working — no breaking changes yet.]
+
+### Commit
+```bash
+git commit -m "phase-1: [description]"
+```
+
+---
+
+## Phase 2: [Next step]
+
+**Goal**: [...]
+
+### Implementation Details
+- [...]
+
+### Commit
+```bash
+git commit -m "phase-2: [description]"
+```
+
+<!-- Repeat phases as needed. Order matters — each builds on the previous. -->
+
+---
+
+## Final Phase: [Cutover / cleanup]
+
+**Goal**: [switch to the new path, remove old code].
+
+### Breaking Changes
+- [Old code removed — intentional.]
+
+### Final Verification
+```bash
+[npm test]     # all tests pass
+[npm run build]  # clean build
+[npm run lint]   # no warnings
+git log          # clean, one commit per phase
+```
+
+---
+
+## Rollback Strategy
+
+If a phase fails:
+1. **Phase 1 fails** → delete new scaffold; re-plan.
+2. **Phase N fails** → `git revert [phase-N-commit]`; fix; retry.
+
+Always commit after each phase so rollback is clean.
+
+---
+
+## Success Criteria
+
+- [ ] All tests pass (unit + integration)
+- [ ] No compilation errors or warnings
+- [ ] Old code completely removed
+- [ ] No dead code or unused imports
+- [ ] [Domain-specific criteria]
+
+---
+
+## Notes
+
+- Don't skip phases — order matters.
+- Commit after each phase, even if it's not "done".
+- If a phase stops making sense, stop and re-read the plan.

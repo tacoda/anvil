@@ -1,0 +1,83 @@
+# SPEC: [FEATURE NAME]
+
+> The feature blueprint — what we're building right now. Specific about WHAT,
+> flexible about HOW. Pair with `CLAUDE.md` (the permanent project constitution).
+
+## Overview
+
+[One paragraph: what this feature is and why it exists.]
+
+## User Story
+
+As a [role], I want to [action] so that [benefit].
+
+## Technology Constraints
+
+- **Framework / libraries**: [specific versions if they matter]
+- **Must use**: [required approaches, patterns, existing modules]
+- **Must NOT**: [things to avoid — keeps the agent focused]
+
+## Functional Requirements
+
+- [Core behavior 1 — be specific about the WHAT]
+- [Core behavior 2]
+- [Interaction model: clicks, hover, keyboard, API calls]
+
+## Acceptance Criteria
+
+- [ ] [Verifiable condition 1]
+- [ ] [Verifiable condition 2]
+- [ ] [Verifiable condition 3]
+
+## API / Interface
+
+<!-- Delete if not applicable. -->
+
+```
+[METHOD] /path
+Request:  { field: type }
+Response: { field: type }
+```
+
+Validates:
+- [validation rule]
+- [validation rule]
+
+## Data Model
+
+<!-- Delete if not applicable. -->
+
+```
+[table/type name]
+  field: type   -- notes
+```
+
+## Error Cases
+
+| Scenario | Status / Result | Code | Message |
+|----------|-----------------|------|---------|
+| [case]   | [400]           | [CODE] | [user-facing message] |
+
+## Visual / UX Requirements
+
+<!-- Delete if backend-only. -->
+
+- [Color palette, typography, layout constraints]
+- [Responsive breakpoints]
+- [Animation / transition expectations]
+
+## Performance Targets
+
+- [e.g., "60 FPS animations", "< 200KB bundle", "< 2s initial load"]
+
+## Out of Scope
+
+- [What this feature is NOT — prevents scope creep.]
+
+## Definition of Done
+
+- [ ] All acceptance criteria met
+- [ ] All error cases handled
+- [ ] Tests written and passing ([coverage target])
+- [ ] Follows project conventions in `CLAUDE.md`
+- [ ] No new security issues

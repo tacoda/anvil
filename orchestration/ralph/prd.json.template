@@ -1,0 +1,20 @@
+{
+  "title": "[Feature Title]",
+  "description": "[One-line description of what the loop builds.]",
+  "stories": [
+    {
+      "id": "story-1",
+      "title": "[Right-sized story — small enough to finish in one iteration]",
+      "description": "[Given ..., when ..., then ...]",
+      "testPattern": "[substring matching the test name for this story]",
+      "passes": false
+    },
+    {
+      "id": "story-2",
+      "title": "[Next story]",
+      "description": "[...]",
+      "testPattern": "[...]",
+      "passes": false
+    }
+  ]
+}

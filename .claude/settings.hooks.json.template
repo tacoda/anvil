@@ -1,0 +1,29 @@
+{
+  "//": "Hook wiring. Merge the `hooks` block into .claude/settings.json. Hooks are shell commands the harness runs on tool events — deterministic automation, not model behavior. Make scripts executable: chmod +x .claude/hooks/*.sh",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "//": "Auto-format files right after Claude writes or edits them.",
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/format-after-edit.sh"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "//": "Block dangerous shell commands before they run.",
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/block-dangerous-command.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

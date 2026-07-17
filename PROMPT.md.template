@@ -1,0 +1,38 @@
+# [PROJECT NAME] — One-Shot Prompt
+
+> A single, self-contained prompt that produces a complete deliverable in one
+> pass (vibe coding). Good specs are specific about chart types, libraries,
+> theme, and constraints — then let the AI make the hundreds of small decisions.
+
+## The Spec
+
+```
+[Write the actual prompt here as a tight paragraph. Include:
+ - What to build (the artifact)
+ - Specific components / features (be concrete, e.g. "line chart, bar chart, donut chart")
+ - Library choice (e.g. "use Chart.js from CDN") — naming it unlocks expert output
+ - Theme / style direction (e.g. "dark theme, responsive grid")
+ - Data direction (e.g. "generate realistic mock data")
+ - Hard constraints (e.g. "single HTML file, no build step")]
+```
+
+## What Good Output Looks Like
+
+- [Concrete element 1 the result should contain]
+- [Concrete element 2]
+- [Code-quality expectation, e.g. "single file, embedded CSS/JS, clean structure"]
+
+## Iteration Ideas
+
+Follow-up prompts to refine the first pass:
+
+1. [e.g., "Add a date range picker for any 30-day window."]
+2. [e.g., "Simulate live updates every 2 seconds."]
+3. [e.g., "Add an Export as CSV button."]
+
+## Why This Spec Works
+
+- **Specific components**: no ambiguity about what to render.
+- **Named library**: the agent applies expert knowledge instead of guessing.
+- **Clear constraints**: architecture is decided, so effort goes into quality.
+- **Right scope**: complete but bounded — one deliverable, one pass.

@@ -1,0 +1,56 @@
+# CLAUDE.md — Project Constitution
+
+> Read automatically at the start of every session. Keep it permanent and
+> stable: how we work here, not what we're building this week. Put per-feature
+> requirements in `SPEC.md` instead.
+
+## Project Overview
+
+[One paragraph: what this project is, what it does, who it's for.]
+
+## Technology Stack
+
+- **Framework**: [e.g., Next.js 15, React 18, Express]
+- **Language**: [e.g., TypeScript strict mode]
+- **Styling**: [e.g., Tailwind CSS, CSS Modules]
+- **Testing**: [e.g., Jest + React Testing Library]
+- **Runtime**: [e.g., Node.js 20, modern browser]
+- **Key dependencies**: [list libraries + versions that matter]
+- **No**: [explicitly exclude anything you don't want introduced]
+
+## Architecture
+
+- `src/` — [what lives here]
+- `tests/` — [testing strategy / layout]
+- `docs/` — [documentation approach]
+- [Add the boundaries that matter: layers, module ownership, data flow.]
+
+## Code Style & Conventions
+
+- [Component/function style: e.g., "functional components with hooks, no classes"]
+- [Naming: e.g., "camelCase variables, PascalCase components, kebab-case files"]
+- [One thing per file? Import order? Export style (named vs default)?]
+- [Error handling convention]
+- [Anything a reviewer flags repeatedly — encode it here]
+
+## Testing Requirements
+
+- [Coverage expectation: e.g., "all new code has tests, 80%+ line coverage"]
+- [What to test: e.g., "behavior, not implementation details"]
+- [Test naming / structure convention]
+
+## Common Commands
+
+```bash
+[npm run dev]      # Start development server
+[npm test]         # Run test suite
+[npm run build]    # Production build
+[npm run lint]     # Run linter
+[npm run format]   # Format code
+```
+
+## Important Notes
+
+- [Gotchas, quirks, critical context that isn't obvious from the code.]
+- [Things that frequently trip people (and AI agents) up.]
+- [Non-negotiable rules: security boundaries, data handling, do-not-touch areas.]

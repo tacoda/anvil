@@ -1,0 +1,23 @@
+{
+  "//": "MCP server registration. Merge the servers you need into .mcp.json (project scope) or .claude/settings.json. Delete the ones you don't use.",
+  "mcpServers": {
+    "context7": {
+      "//": "Up-to-date library/framework docs on demand.",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"]
+    },
+    "chrome-devtools": {
+      "//": "Drive a real browser: screenshots, console, network, performance traces.",
+      "command": "npx",
+      "args": ["chrome-devtools-mcp@latest"]
+    },
+    "[custom-server]": {
+      "//": "Your own stdio MCP server.",
+      "command": "[node]",
+      "args": ["[./mcp-server/index.js]"],
+      "env": {
+        "[API_KEY]": "[${API_KEY}]"
+      }
+    }
+  }
+}
