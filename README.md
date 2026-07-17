@@ -92,11 +92,13 @@ All concrete, filled-in examples live under `examples/`. Everything under
 
 - `*.template` — rename to the real name and fill in `[BRACKETS]`
   (`CLAUDE.md.template` → `CLAUDE.md`).
-- Everything else (commands, example skills/agents, `ralph.sh`) is usable as-is;
-  edit the project-specific bits.
+- Everything else (commands, `ralph.sh`) is usable as-is; edit the
+  project-specific bits.
 
 ## Quick start
 
+0. Browse **[`examples/`](examples/)** to see filled-in skills, agents, rules,
+   specs, prompts, and a working MCP server before starting from a template.
 1. `cp CLAUDE.md.template <project>/CLAUDE.md` and fill it in.
 2. Copy `.claude/commands/` into your project's `.claude/commands/`.
 3. Merge `.claude/settings.json.template` into `<project>/.claude/settings.json`.
