@@ -1,0 +1,25 @@
+<!-- Project memory index. Durable facts an agent should recall across sessions that AREN'T derivable from the code, git history, or CLAUDE.md. One line per entry. Keep it short — this file is context cost on every recall. Detail lives in the linked file, not here. -->
+
+# Memory
+
+Curated, long-lived project knowledge. Each line points to where the detail
+lives. If a fact belongs in code, a rule, a feature doc, or an ADR, put it there
+and link it — don't duplicate it here.
+
+## Decisions
+
+- [Short fact / decision] — [why it's non-obvious]. See [docs/adr/NNNN-slug.md](docs/adr/).
+
+## Gotchas
+
+- [Trap the agent hit and would hit again] — [the fix / the invariant].
+
+## Context not in the repo
+
+- [Constraint, deadline, external dependency, or preference] — [absolute date if time-bound].
+
+## Conventions
+
+- Add an entry only when something was learned the hard way or can't be inferred.
+- Convert relative dates to absolute ("2026-07-17", not "last week").
+- Prune entries that become stale or move into code/rules/ADRs.

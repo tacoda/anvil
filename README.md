@@ -17,6 +17,7 @@ anvil/
 │
 ├── .claude/
 │   ├── INDEX.json.template             # Manifest of .claude artifacts
+│   ├── MEMORY.md.template              # Durable cross-session project memory
 │   ├── debt-ledger.md.template         # Tracked, prioritized debt
 │   ├── settings.json.template          # Model, permissions, context config
 │   ├── settings.mcp.json.template      # MCP server registration
