@@ -73,6 +73,7 @@ anvil/
     ├── skills/                         # frontend-design, api-design, pptx
     ├── agents/                         # data-layer, business-logic, api-layer
     ├── rules/                          # accessibility, testing
+    ├── plans/                          # Multi-phase migration plan
     ├── specs/                          # Real SPEC instances
     ├── prompts/                        # Real vibe-coding prompts
     └── mcp-server/                     # A working custom MCP server (TS)

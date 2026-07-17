@@ -20,6 +20,9 @@ examples/
 │   ├── accessibility.md         # a11y rule scoped to .tsx
 │   └── testing.md               # test rule scoped to src/
 │
+├── plans/          # Real plan instance (→ orchestration/migration-plan.md.template)
+│   └── migration-flat-to-layered.md  # 5-phase Express refactor to layered arch
+│
 ├── specs/          # Real SPEC instances (→ SPEC.md.template)
 │   ├── invitation-service.md    # API feature with tokens, validation, error table
 │   ├── tasks-api.md             # CRUD task API spec
