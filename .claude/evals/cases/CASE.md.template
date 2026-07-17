@@ -1,0 +1,27 @@
+<!-- Eval case. Copy to `cases/<rule-slug>.md`. The subject agent runs the Probe blind to the rule; Check decides PASS/FAIL. -->
+
+---
+rule: [rule-slug-under-test]
+---
+
+## Probe
+
+[A realistic task, no hint of the rule. It must be able to fail — something an
+unguided agent would naturally do the wrong way.]
+
+## Expect (compliant)
+
+[The signal that the rule landed — what a correct response contains.]
+
+## Reject (violation)
+
+[The signal that the rule was missed — the specific wrong pattern.]
+
+## Check
+
+[The deterministic assertion. Prefer something a script can verify.]
+
+- MUST NOT [match/contain <pattern>].
+- MUST [reference/use <required thing>].
+
+Pass = [all hold]. Fail = [any violation present].

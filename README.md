@@ -46,6 +46,10 @@ anvil/
 │   │   └── FEATURE.md.template         # Feature doc scaffold
 │   ├── plans/
 │   │   └── PLAN.md.template            # Standalone bounded plan
+│   ├── evals/                          # Behavioral tests for rules
+│   │   ├── README.md                   # Case format + what makes a good eval
+│   │   ├── RESULTS.md                  # Append-only run log
+│   │   └── cases/CASE.md.template      # probe/expect/reject/check scaffold
 │   └── hooks/
 │       ├── format-after-edit.sh        # PostToolUse formatter
 │       └── block-dangerous-command.sh  # PreToolUse guard
