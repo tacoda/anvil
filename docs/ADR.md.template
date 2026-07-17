@@ -1,0 +1,28 @@
+<!-- Architecture Decision Record. Copy to `docs/adr/NNNN-<slug>.md` (zero-padded, sequential). One decision per file. Never edit a decided ADR — supersede it with a new one. -->
+
+# ADR-[NNNN]: [Short decision title]
+
+- **Status**: [Proposed | Accepted | Superseded by ADR-NNNN | Deprecated]
+- **Date**: [YYYY-MM-DD]
+- **Deciders**: [who]
+
+## Context
+
+[The forces at play: the problem, the constraints, what makes this decision
+necessary now. Neutral — no preferred option yet.]
+
+## Decision
+
+[The choice, stated in one or two sentences. "We will ..."]
+
+## Options Considered
+
+1. **[Option A]** — [pros / cons]
+2. **[Option B]** — [pros / cons]
+3. **[Chosen option]** — [why it wins]
+
+## Consequences
+
+- **Positive**: [what gets better]
+- **Negative**: [what we accept / trade away]
+- **Follow-ups**: [work this decision creates — link tickets]

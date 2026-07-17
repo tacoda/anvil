@@ -1,0 +1,40 @@
+[
+  {
+    "//": "Manifest of .claude artifacts — one entry per rule/skill/command/agent/feature. Lets tooling (and agents) list what exists without walking the tree. Generate it from frontmatter rather than hand-maintaining; regenerate when artifacts change.",
+    "kind": "rule",
+    "id": "[rule-slug]",
+    "path": ".claude/rules/[rule-slug].md",
+    "description": "[one-line, copied from the artifact's frontmatter]",
+    "paths": ["[glob]"],
+    "layer": "project",
+    "bytes": 0
+  },
+  {
+    "kind": "skill",
+    "id": "[skill-slug]",
+    "path": ".claude/skills/[skill-slug]/SKILL.md",
+    "description": "[one-line]",
+    "bytes": 0
+  },
+  {
+    "kind": "command",
+    "id": "[command-slug]",
+    "path": ".claude/commands/[command-slug].md",
+    "description": "[one-line]",
+    "bytes": 0
+  },
+  {
+    "kind": "agent",
+    "id": "[agent-slug]",
+    "path": ".claude/agents/[agent-slug].md",
+    "description": "[one-line]",
+    "bytes": 0
+  },
+  {
+    "kind": "feature",
+    "id": "[feature-slug]",
+    "path": ".claude/features/[feature-slug].md",
+    "description": "[one-line]",
+    "bytes": 0
+  }
+]

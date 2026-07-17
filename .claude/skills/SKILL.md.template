@@ -1,5 +1,14 @@
+---
+name: [skill-slug]
+description: [One line the agent reads to decide relevance. State what the skill does AND when to use it — this is the only text loaded until the skill is invoked. Under ~200 chars.]
+---
+
 # Skill: [SKILL NAME]
 
+> Lives at `.claude/skills/[skill-slug]/SKILL.md` (one directory per skill; the
+> dir name and `name:` match). Bundle supporting files (references, scripts,
+> templates) alongside it in the same directory.
+>
 > Encodes domain expertise so Claude produces consistently good output in one
 > area. See `docs/SKILL_AUTHORING_GUIDE.md` for the full method, and
 > `frontend-design.md` / `api-design.md` for complete examples.

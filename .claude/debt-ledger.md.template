@@ -1,0 +1,13 @@
+# Debt Ledger
+
+Tracked, prioritized debt — inconsistencies, deferred cleanups, and known-imperfect
+compromises. Add a row when you knowingly leave something less-than-ideal. Work
+the ledger highest-priority first on a regular cadence.
+
+Close a row by fixing it (note the fix) or by explicitly accepting it as permanent.
+
+Priority: **P1** (actively misleads / risks harm) · **P2** (friction, no active harm) · **P3** (nice-to-have).
+
+| ID | Symptom | Location | Proposed fix | Priority | Owner | Status |
+|----|---------|----------|--------------|----------|-------|--------|
+| D-1 | <what's wrong / what was deferred> | `<path>` | <how to fix, or — if accepted> | P2 | <who> | **open** |

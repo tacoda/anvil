@@ -1,0 +1,32 @@
+<!-- Standalone plan for a bounded piece of work. Copy to `<plan-name>.md`. Delete when the work lands (or archive). For large refactors/migrations, use orchestration/migration-plan.md.template instead. -->
+
+# Plan: [Objective]
+
+## Goal
+
+[One sentence: what "done" looks like. The success criterion, not the activity.]
+
+## Context
+
+[Why now, and the key constraints. Link the spec / ticket / ADR.]
+
+## Steps
+
+Each step names a verification, so the agent can loop without asking.
+
+1. [Step] → verify: [check, e.g. "tests X pass"]
+2. [Step] → verify: [check]
+3. [Step] → verify: [check]
+
+## Risks / Unknowns
+
+- [What might block this, or what you're unsure of.]
+
+## Out of Scope
+
+- [What this plan deliberately does not do.]
+
+## Done When
+
+- [ ] [Verifiable outcome]
+- [ ] [Verifiable outcome]

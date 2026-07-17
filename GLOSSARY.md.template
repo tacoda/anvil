@@ -1,0 +1,22 @@
+# Glossary
+
+Shared vocabulary for this project. Define a term once, here, and link to it from
+rules, feature docs, and specs instead of redefining. Keep definitions to a
+sentence or two; point to the code or feature doc for detail.
+
+## Terms
+
+### [Term]
+<One-or-two-sentence definition. Note the canonical code location if one exists.>
+
+### [Term]
+<Definition.> See `.claude/features/[feature].md`.
+
+### [Acronym] ([Expansion])
+<What it means in this project's context — not the generic industry meaning if they differ.>
+
+## Conventions
+
+- Alphabetical within a section.
+- If two terms are used interchangeably in conversation but mean different things
+  in code, say so explicitly — that ambiguity is exactly what a glossary fixes.

@@ -12,8 +12,11 @@ anvil/
 ├── CLAUDE.md.template          # Project constitution (permanent context)
 ├── SPEC.md.template            # Feature blueprint (what to build now)
 ├── PROMPT.md.template          # One-shot / vibe-coding prompt
+├── GLOSSARY.md.template        # Shared domain vocabulary
 │
 ├── .claude/
+│   ├── INDEX.json.template             # Manifest of .claude artifacts
+│   ├── debt-ledger.md.template         # Tracked, prioritized debt
 │   ├── settings.json.template          # Model, permissions, context config
 │   ├── settings.mcp.json.template      # MCP server registration
 │   ├── settings.hooks.json.template    # Hook wiring (auto-lint, guards)
@@ -27,7 +30,7 @@ anvil/
 │   │   ├── retro.md                    # /retro — session retrospective
 │   │   └── evaluate.md                 # /evaluate — pick an AI pattern
 │   ├── skills/
-│   │   ├── SKILL.md.template           # Skill scaffold
+│   │   ├── SKILL.md.template           # Skill scaffold (dir + frontmatter)
 │   │   ├── frontend-design.md          # Example: distinctive frontends
 │   │   └── api-design.md               # Example: RESTful API design
 │   ├── agents/
@@ -35,6 +38,14 @@ anvil/
 │   │   ├── data-layer.md               # Example specialist
 │   │   ├── business-logic.md           # Example specialist
 │   │   └── api-layer.md                # Example specialist
+│   ├── rules/                          # Path-scoped auto-loaded rules
+│   │   ├── README.md                   # Frontmatter schema + placement litmus
+│   │   └── RULE.md.template            # Rule scaffold
+│   ├── features/                       # On-demand domain context docs
+│   │   ├── README.md                   # When/how to add a feature doc
+│   │   └── FEATURE.md.template         # Feature doc scaffold
+│   ├── plans/
+│   │   └── PLAN.md.template            # Standalone bounded plan
 │   └── hooks/
 │       ├── format-after-edit.sh        # PostToolUse formatter
 │       └── block-dangerous-command.sh  # PreToolUse guard
@@ -50,7 +61,8 @@ anvil/
 │       └── progress.txt                # Append-only learnings log
 │
 └── docs/
-    └── SKILL_AUTHORING_GUIDE.md        # How to write skills
+    ├── SKILL_AUTHORING_GUIDE.md        # How to write skills
+    └── ADR.md.template                 # Architecture decision record
 ```
 
 ## The two-file mental model

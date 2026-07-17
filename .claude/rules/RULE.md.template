@@ -1,0 +1,38 @@
+---
+description: <one-line summary shown in the rule index — under ~120 chars>
+paths:
+  - "<glob>"      # e.g. "app/Http/Controllers/**" — "**" loads every session
+layer: project   # project | team | personal (see rules/README.md litmus)
+locked: false    # true = iron law
+why: <one-line: the incident or principle this rule prevents>
+---
+
+# <Rule Title>
+
+## IRON LAWS
+
+<!-- Delete if this rule has no non-negotiables. Keep these few and absolute. -->
+
+**<THE ONE THING THAT MUST NEVER HAPPEN.>**
+
+<One paragraph: what the law is and why. Link the related rule or spec.>
+
+## Golden Rules
+
+- **<Aim for X.>** <Why — the reviewer test.>
+- **<Aim for Y.>** <Why.>
+
+## Rules
+
+- <Specific, checkable instruction.>
+- <Specific, checkable instruction.>
+
+## Examples
+
+```<lang>
+// Good: <what this demonstrates>
+```
+
+```<lang>
+// Bad: <what to avoid and why>
+```

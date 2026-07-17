@@ -1,0 +1,39 @@
+<!-- Feature doc. Copy to `<feature-name>.md` and fill in. Keep under ~60 lines. -->
+
+---
+description: <one sentence: what this feature is and which user-facing capability it implements>
+---
+
+# <Feature Name>
+
+## Summary
+
+<One short paragraph: what this feature does, why it exists, and the trigger that invokes it.>
+
+## Key Files
+
+<Files an agent must read to make a correct change. Group by layer if helpful.>
+
+- `<path>` — <role>
+- `<path>` — <role>
+
+## Domain Terms
+
+<Terms specific to this feature. Link to `GLOSSARY.md` rather than redefine.>
+
+- **<term>** — <meaning>
+
+## Entities / Data
+
+<Schemas, tables, or core types touched. Column-by-column only when it matters; otherwise link.>
+
+## Endpoints / Entry Points
+
+<HTTP routes, CLI commands, queue handlers, or service methods that invoke this feature.>
+
+| Method | Path / Name | Purpose |
+|---|---|---|
+
+## Gotchas
+
+<What an agent gets wrong on first attempt — invariants, ordering, hidden coupling.>
