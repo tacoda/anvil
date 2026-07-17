@@ -36,20 +36,12 @@ anvil/
 │   │   ├── retro.md                    # /retro — session retrospective
 │   │   └── evaluate.md                 # /evaluate — pick an AI pattern
 │   ├── skills/
-│   │   ├── SKILL.md.template           # Skill scaffold (dir + frontmatter)
-│   │   ├── frontend-design.md          # Example: distinctive frontends
-│   │   ├── api-design.md               # Example: RESTful API design
-│   │   └── pptx-presentation.md        # Example: PowerPoint via python-pptx
+│   │   └── SKILL.md.template           # Skill scaffold (dir + frontmatter)
 │   ├── agents/
-│   │   ├── AGENT.md.template           # Subagent scaffold
-│   │   ├── data-layer.md               # Example specialist
-│   │   ├── business-logic.md           # Example specialist
-│   │   └── api-layer.md                # Example specialist
+│   │   └── AGENT.md.template           # Subagent scaffold
 │   ├── rules/                          # Path-scoped auto-loaded rules
 │   │   ├── README.md                   # Frontmatter schema + placement litmus
-│   │   ├── RULE.md.template            # Rule scaffold
-│   │   ├── accessibility.md            # Example: a11y rule for .tsx
-│   │   └── testing.md                  # Example: test rule for src/
+│   │   └── RULE.md.template            # Rule scaffold
 │   ├── features/                       # On-demand domain context docs
 │   │   ├── README.md                   # When/how to add a feature doc
 │   │   └── FEATURE.md.template         # Feature doc scaffold
@@ -78,10 +70,16 @@ anvil/
 │   └── ADR.md.template                 # Architecture decision record
 │
 └── examples/                           # Filled-in reference instances
+    ├── skills/                         # frontend-design, api-design, pptx
+    ├── agents/                         # data-layer, business-logic, api-layer
+    ├── rules/                          # accessibility, testing
     ├── specs/                          # Real SPEC instances
     ├── prompts/                        # Real vibe-coding prompts
     └── mcp-server/                     # A working custom MCP server (TS)
 ```
+
+All concrete, filled-in examples live under `examples/`. Everything under
+`.claude/` is a blank scaffold (`*.template`) or a shape-defining `README.md`.
 
 ## The two-file mental model
 

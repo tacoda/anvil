@@ -6,14 +6,28 @@ to be copied verbatim; it's reference.
 
 ```
 examples/
-├── specs/          # Real SPEC.md.template instances
+├── skills/         # Real SKILL instances (→ .claude/skills/SKILL.md.template)
+│   ├── frontend-design.md       # Distinctive, non-generic frontends
+│   ├── api-design.md            # RESTful API conventions
+│   └── pptx-presentation.md     # PowerPoint via python-pptx
+│
+├── agents/         # Real subagent instances (→ .claude/agents/AGENT.md.template)
+│   ├── data-layer.md            # Repository / CRUD specialist
+│   ├── business-logic.md        # Service / validation specialist
+│   └── api-layer.md             # Express routes specialist
+│
+├── rules/          # Real rule instances (→ .claude/rules/RULE.md.template)
+│   ├── accessibility.md         # a11y rule scoped to .tsx
+│   └── testing.md               # test rule scoped to src/
+│
+├── specs/          # Real SPEC instances (→ SPEC.md.template)
 │   ├── invitation-service.md    # API feature with tokens, validation, error table
 │   ├── tasks-api.md             # CRUD task API spec
 │   ├── fullstack-task-app.md    # Full-stack app spec (agent-team scope)
 │   ├── new-feature.md           # Small feature spec
 │   └── pagination-util.md       # Library/utility spec (drives the Ralph loop)
 │
-├── prompts/        # Real PROMPT.md.template instances (vibe coding)
+├── prompts/        # Real PROMPT instances (→ PROMPT.md.template)
 │   ├── data-dashboard.md        # Chart.js analytics dashboard
 │   ├── landing-page.md          # Marketing landing page
 │   ├── retrowave-game.md        # Canvas game
@@ -28,9 +42,7 @@ examples/
     └── README.md
 ```
 
-## See also — examples living next to their templates
-
-- **Skills**: `.claude/skills/frontend-design.md`, `api-design.md`, `pptx-presentation.md`
-- **Agents**: `.claude/agents/data-layer.md`, `business-logic.md`, `api-layer.md`
-- **Rules**: `.claude/rules/accessibility.md`, `testing.md`
-- **Orchestration**: `orchestration/ralph/` (the pagination-util spec above drives it)
+The three layered agents (`data-layer` → `business-logic` → `api-layer`) and the
+`invitation-service` spec are designed to be read together — they show one feature
+built by sequential subagent delegation (see `orchestration/orchestrate.md.template`).
+The `pagination-util` spec drives the loop in `orchestration/ralph/`.

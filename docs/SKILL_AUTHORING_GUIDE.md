@@ -394,7 +394,7 @@ Skills evolve. Document versions:
 
 ### Complete Skill Template
 
-See `.claude/skills/frontend-design.md` and `.claude/skills/api-design.md` in this demo for complete examples.
+See `examples/skills/frontend-design.md` and `examples/skills/api-design.md` in this demo for complete examples.
 
 ## Real-World Skill Creation Workflow
 
@@ -470,7 +470,7 @@ The skills you create today become the foundation for your AI-assisted developme
 ---
 
 **Next Steps:**
-1. Read `.claude/skills/api-design.md` to see a complete, real example
+1. Read `examples/skills/api-design.md` to see a complete, real example
 2. Examine the before/after comparison in `examples/api-before/` and `examples/api-after/`
 3. Create your own skill following this guide
 4. Test it with Claude

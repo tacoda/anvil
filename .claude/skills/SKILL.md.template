@@ -11,7 +11,8 @@ description: [One line the agent reads to decide relevance. State what the skill
 >
 > Encodes domain expertise so Claude produces consistently good output in one
 > area. See `docs/SKILL_AUTHORING_GUIDE.md` for the full method, and
-> `frontend-design.md` / `api-design.md` for complete examples.
+> `examples/skills/` (frontend-design, api-design, pptx-presentation) for
+> complete examples.
 
 ## Purpose
 
