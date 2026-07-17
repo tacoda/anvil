@@ -1,52 +1,102 @@
-# Governance
+<!-- Project governance. Structure follows the governance.md guide (https://governance.md). Fill in the brackets; delete sections that don't apply to your project's size. -->
 
-How this project's AI setup — the charter — is owned, changed, and maintained.
-The charter is everything an agent reads to work here: `CLAUDE.md`, `.claude/`
-(rules, skills, commands, agents, features, plans, evals), `GLOSSARY.md`, and
-this file. Application code is governed by the rules; this file governs the
-rules themselves.
+# Project Governance
 
-## Ownership
+This document defines how **[PROJECT NAME]** is governed: who holds what
+responsibility, how decisions get made, and how contributors advance.
 
-| Area | Owner | Notes |
-|------|-------|-------|
-| `CLAUDE.md` (constitution) | [role/person] | Changes need [review level]. |
-| `.claude/rules/` | [role/person] | Rule authors; see layer litmus in `rules/README.md`. |
-| `.claude/skills/`, `commands/`, `agents/` | [role/person] | |
-| `.claude/features/`, `GLOSSARY.md` | [anyone / role] | Low-ceremony; keep current. |
-| This file | [role/person] | |
+## Table of Contents
 
-## Layers & authority
+- [Project Overview](#project-overview)
+- [Roles and Responsibilities](#roles-and-responsibilities)
+- [Decision Making Process](#decision-making-process)
+- [Code of Conduct](#code-of-conduct)
+- [Communication Channels](#communication-channels)
+- [Meeting Schedule](#meeting-schedule)
+- [Contact Information](#contact-information)
 
-Rules carry a `layer`: `project` | `team` | `personal` (see `.claude/rules/README.md`).
+## Project Overview
 
-- **`locked: true`** rules are iron laws. Overriding one is a **deviation** — it
-  must be surfaced and justified, never silent.
-- An inner layer may not silently contradict an outer layer. [Name who resolves conflicts.]
+[One paragraph: what the project is, its mission, and the governance model in one
+line — e.g. "maintainer consensus with a steering committee for escalation".]
 
-## Changing the charter
+## Roles and Responsibilities
 
-1. Open a change against the relevant file(s). One concern per change.
-2. Every new/changed rule states its **`why`** — the incident or principle it prevents.
-3. [Review requirement — e.g. "one owner approval; iron-law changes need two."]
-4. Log material changes in `CHARTER-CHANGELOG.md` (or this repo's changelog).
-5. Regenerate `.claude/INDEX.json` if artifacts were added/removed/renamed.
+Defines the roles, their authority, and how contributors grow into them.
 
-## Deprecation
+### Contributors
 
-- **Deprecate, don't delete.** Mark a rule superseded and point to its replacement
-  so the reasoning survives.
-- Record the trade-off in `.claude/debt-ledger.md` if the change leaves known debt.
+Anyone who submits issues, PRs, docs, or reviews.
 
-## Maintenance cadence
+- **Can**: open issues/PRs, join discussions, review others' work.
+- **Expected to**: follow the Code of Conduct and contribution guidelines.
+- **Advancement**: [what earns Maintainer status — e.g. "N merged non-trivial
+  PRs and a nomination by an existing maintainer".]
 
-- **[Weekly/per-PR]**: boy-scout fixes — obvious drift, stale paths.
-- **[Monthly]**: work the debt ledger highest-priority first; run evals on
-  iron-law and high-risk rules; prune rules no longer earning their token cost.
-- **[Quarterly]**: re-check layer placement; retire dead features/plans.
+### Maintainers
 
-## When agent and charter disagree
+Contributors with commit/merge rights and ongoing responsibility for an area.
 
-- The charter wins. If the charter is wrong, fix the charter — don't work around it.
-- A rule that keeps getting violated isn't reaching that path: fix the rule (and
-  add an eval), rather than repeating the correction.
+- **Can**: review and merge PRs, triage issues, cut releases, [merge critical
+  security fixes without full review — see Emergency Fixes].
+- **Expected to**: uphold quality, respond to reviews within [timeframe],
+  participate in decisions.
+- **Onboarding / offboarding**: [how added; how a maintainer goes emeritus.]
+
+### Steering Committee
+
+<!-- Delete for small projects. -->
+
+[N] members responsible for cross-cutting direction, conflict resolution, and
+final escalation.
+
+- **Composition**: [how seats are filled — election, appointment, term length.]
+- **Authority**: breaks ties, approves major changes, amends this document.
+
+## Decision Making Process
+
+Default: **[consensus among maintainers]**. Escalate to a **[majority vote]**
+when consensus stalls, and to the **[Steering Committee]** as final recourse.
+Decisions are documented in [decision logs / issues / ADRs in `docs/`].
+
+### Technical Decisions
+
+[Day-to-day: lazy consensus on a PR — merges after [N] maintainer approvals and
+no blocking objections within [timeframe].]
+
+### Major Changes
+
+Require a written proposal with impact analysis and community discussion.
+
+- **Trigger**: [breaking API changes, new dependencies, architecture shifts, ...]
+- **Process**: [RFC/proposal → discussion period of [X days] → maintainer vote.]
+
+### Emergency Fixes
+
+[Critical security or outage fixes: a maintainer may merge immediately, then
+open a retroactive review within [timeframe].]
+
+## Code of Conduct
+
+This project follows [its Code of Conduct](CODE_OF_CONDUCT.md). [Who enforces it
+and how violations are reported/handled.]
+
+## Communication Channels
+
+- **[Chat]**: [link]
+- **[Issues / discussions]**: [link]
+- **[Mailing list / forum]**: [link]
+
+## Meeting Schedule
+
+- **[Maintainer sync]**: [cadence, time zone, where; notes posted to [location].]
+
+## Contact Information
+
+- **Security**: [security contact / policy link]
+- **General / private**: [email or contact]
+
+## Amendments
+
+Changes to this document follow the [Major Changes](#major-changes) process and
+are recorded in [the changelog / git history].
