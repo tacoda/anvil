@@ -14,6 +14,10 @@ anvil/
 ├── PROMPT.md.template          # One-shot / vibe-coding prompt
 ├── GLOSSARY.md.template        # Shared domain vocabulary
 ├── GOVERNANCE.md.template      # Project governance (roles, decisions, maintainers)
+├── CONTRIBUTING.md.template    # How to build, test, and submit changes
+├── CODE_OF_CONDUCT.md.template # Community standards + enforcement
+├── SECURITY.md.template        # Vulnerability reporting policy
+├── AGENTS.md.template          # Cross-tool instructions for AI agents
 │
 ├── .claude/
 │   ├── INDEX.json.template             # Manifest of .claude artifacts

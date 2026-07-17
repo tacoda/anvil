@@ -1,0 +1,57 @@
+<!-- AGENTS.md — cross-tool instructions for AI coding agents (the emerging open standard read by many agent tools). Keep it a single, tool-agnostic source of truth. Claude Code reads CLAUDE.md; if you keep both, make CLAUDE.md a pointer to this file (or symlink) so they never drift. -->
+
+# AGENTS.md
+
+Instructions for AI coding agents working in **[PROJECT NAME]**.
+
+## Project Overview
+
+[One paragraph: what this project is and its tech stack.]
+
+## Setup
+
+```bash
+[install]      # e.g. npm install
+[build]        # e.g. npm run build
+```
+
+## Build, Test, Lint
+
+Run these before proposing a change is complete:
+
+```bash
+[npm test]        # test suite
+[npm run lint]    # linter
+[npm run build]   # must compile clean
+```
+
+- [How to run a single test.]
+- [Anything slow or requiring services — and how to skip/mock it.]
+
+## Conventions
+
+- [Language/framework style: e.g. "functional components, no classes".]
+- [Naming, file layout, export style.]
+- [Error-handling and logging conventions.]
+
+## Boundaries
+
+- **Do**: [expected changes, safe areas].
+- **Do NOT**: [generated files, vendored code, migrations, secrets — never edit].
+- Ask before: [irreversible or wide-blast-radius changes].
+
+## Commits & PRs
+
+- [Commit convention and attribution policy.]
+- [PR title/body requirements.]
+
+## Security
+
+- Never commit secrets. [Where config/secrets actually live.]
+- Report vulnerabilities per [SECURITY.md](SECURITY.md); don't file them as public issues.
+
+## More Context
+
+- Human contributor guide: [CONTRIBUTING.md](CONTRIBUTING.md)
+- Governance & roles: [GOVERNANCE.md](GOVERNANCE.md)
+- Claude Code users: `CLAUDE.md` + `.claude/` (rules, skills, commands, agents, features).

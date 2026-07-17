@@ -1,0 +1,40 @@
+# Security Policy
+
+## Reporting a Vulnerability
+
+**Do not open a public issue for security vulnerabilities.**
+
+Report privately to **[security contact — email or GitHub private advisory link]**.
+Include:
+
+- A description of the issue and its impact.
+- Steps to reproduce (proof-of-concept if possible).
+- Affected version(s) and environment.
+
+You can expect an acknowledgment within **[timeframe, e.g. 48 hours]** and a
+status update within **[timeframe, e.g. 5 business days]**.
+
+## Disclosure Process
+
+1. You report privately.
+2. We confirm the issue and determine affected versions.
+3. We develop and test a fix.
+4. We release the fix and publish an advisory, crediting you unless you prefer
+   to remain anonymous.
+
+We ask that you give us **[e.g. 90 days]** to address the issue before any
+public disclosure.
+
+## Supported Versions
+
+| Version | Supported |
+|---------|-----------|
+| [1.x]   | ✅ |
+| [< 1.0] | ❌ |
+
+## Scope
+
+<!-- Optional: name what is and isn't in scope for reports. -->
+
+- **In scope**: [the application, its APIs, ...]
+- **Out of scope**: [third-party services, social engineering, DoS, ...]

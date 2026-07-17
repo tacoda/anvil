@@ -1,0 +1,55 @@
+# Contributing to [PROJECT NAME]
+
+Thanks for contributing. This guide covers how to get set up, the workflow, and
+what a mergeable change looks like.
+
+- **Conduct**: all participation is governed by [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+- **Governance**: roles and decision-making are in [GOVERNANCE.md](GOVERNANCE.md).
+- **Security**: report vulnerabilities privately per [SECURITY.md](SECURITY.md).
+
+## Getting Started
+
+```bash
+[git clone <repo> && cd <project>]
+[install command]     # e.g. npm install
+[build command]       # e.g. npm run build
+[test command]        # e.g. npm test
+```
+
+Requirements: [languages, runtimes, versions, external services].
+
+## Development Workflow
+
+1. Find or open an issue describing the change.
+2. Branch from `[main]`: `[type/short-description]`.
+3. Make the change. Keep it one logical change per PR.
+4. Add or update tests. [Coverage expectation.]
+5. Run the full local gate before pushing:
+   ```bash
+   [npm run lint]
+   [npm test]
+   ```
+6. Open a PR (see below).
+
+## Commit Messages
+
+- [Convention, e.g. Conventional Commits: `type(scope): subject`.]
+- Explain the **why** in the body, not just the what.
+- [Attribution / co-author policy, if any.]
+
+## Pull Requests
+
+- Title: [format, length limit, ticket prefix if used].
+- Body: link the issue, explain the why, include a test plan for user-facing changes.
+- All checks green; at least [N] maintainer approval(s).
+- [Squash-merge / merge-commit policy.]
+
+## Reporting Bugs & Requesting Features
+
+- Use the issue templates in `.github/ISSUE_TEMPLATE/`.
+- For bugs: include repro steps, expected vs actual, and environment.
+
+## For AI Coding Agents
+
+See [AGENTS.md](AGENTS.md) and, for Claude Code specifically, `CLAUDE.md` plus
+the rules in `.claude/rules/`.
