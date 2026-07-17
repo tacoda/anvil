@@ -38,7 +38,8 @@ anvil/
 │   ├── skills/
 │   │   ├── SKILL.md.template           # Skill scaffold (dir + frontmatter)
 │   │   ├── frontend-design.md          # Example: distinctive frontends
-│   │   └── api-design.md               # Example: RESTful API design
+│   │   ├── api-design.md               # Example: RESTful API design
+│   │   └── pptx-presentation.md        # Example: PowerPoint via python-pptx
 │   ├── agents/
 │   │   ├── AGENT.md.template           # Subagent scaffold
 │   │   ├── data-layer.md               # Example specialist
@@ -46,7 +47,9 @@ anvil/
 │   │   └── api-layer.md                # Example specialist
 │   ├── rules/                          # Path-scoped auto-loaded rules
 │   │   ├── README.md                   # Frontmatter schema + placement litmus
-│   │   └── RULE.md.template            # Rule scaffold
+│   │   ├── RULE.md.template            # Rule scaffold
+│   │   ├── accessibility.md            # Example: a11y rule for .tsx
+│   │   └── testing.md                  # Example: test rule for src/
 │   ├── features/                       # On-demand domain context docs
 │   │   ├── README.md                   # When/how to add a feature doc
 │   │   └── FEATURE.md.template         # Feature doc scaffold
@@ -70,9 +73,14 @@ anvil/
 │       ├── prd.json.template           # User stories with pass/fail
 │       └── progress.txt                # Append-only learnings log
 │
-└── docs/
-    ├── SKILL_AUTHORING_GUIDE.md        # How to write skills
-    └── ADR.md.template                 # Architecture decision record
+├── docs/
+│   ├── SKILL_AUTHORING_GUIDE.md        # How to write skills
+│   └── ADR.md.template                 # Architecture decision record
+│
+└── examples/                           # Filled-in reference instances
+    ├── specs/                          # Real SPEC instances
+    ├── prompts/                        # Real vibe-coding prompts
+    └── mcp-server/                     # A working custom MCP server (TS)
 ```
 
 ## The two-file mental model
