@@ -1,0 +1,52 @@
+# Governance
+
+How this project's AI setup — the charter — is owned, changed, and maintained.
+The charter is everything an agent reads to work here: `CLAUDE.md`, `.claude/`
+(rules, skills, commands, agents, features, plans, evals), `GLOSSARY.md`, and
+this file. Application code is governed by the rules; this file governs the
+rules themselves.
+
+## Ownership
+
+| Area | Owner | Notes |
+|------|-------|-------|
+| `CLAUDE.md` (constitution) | [role/person] | Changes need [review level]. |
+| `.claude/rules/` | [role/person] | Rule authors; see layer litmus in `rules/README.md`. |
+| `.claude/skills/`, `commands/`, `agents/` | [role/person] | |
+| `.claude/features/`, `GLOSSARY.md` | [anyone / role] | Low-ceremony; keep current. |
+| This file | [role/person] | |
+
+## Layers & authority
+
+Rules carry a `layer`: `project` | `team` | `personal` (see `.claude/rules/README.md`).
+
+- **`locked: true`** rules are iron laws. Overriding one is a **deviation** — it
+  must be surfaced and justified, never silent.
+- An inner layer may not silently contradict an outer layer. [Name who resolves conflicts.]
+
+## Changing the charter
+
+1. Open a change against the relevant file(s). One concern per change.
+2. Every new/changed rule states its **`why`** — the incident or principle it prevents.
+3. [Review requirement — e.g. "one owner approval; iron-law changes need two."]
+4. Log material changes in `CHARTER-CHANGELOG.md` (or this repo's changelog).
+5. Regenerate `.claude/INDEX.json` if artifacts were added/removed/renamed.
+
+## Deprecation
+
+- **Deprecate, don't delete.** Mark a rule superseded and point to its replacement
+  so the reasoning survives.
+- Record the trade-off in `.claude/debt-ledger.md` if the change leaves known debt.
+
+## Maintenance cadence
+
+- **[Weekly/per-PR]**: boy-scout fixes — obvious drift, stale paths.
+- **[Monthly]**: work the debt ledger highest-priority first; run evals on
+  iron-law and high-risk rules; prune rules no longer earning their token cost.
+- **[Quarterly]**: re-check layer placement; retire dead features/plans.
+
+## When agent and charter disagree
+
+- The charter wins. If the charter is wrong, fix the charter — don't work around it.
+- A rule that keeps getting violated isn't reaching that path: fix the rule (and
+  add an eval), rather than repeating the correction.

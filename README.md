@@ -13,6 +13,7 @@ anvil/
 ├── SPEC.md.template            # Feature blueprint (what to build now)
 ├── PROMPT.md.template          # One-shot / vibe-coding prompt
 ├── GLOSSARY.md.template        # Shared domain vocabulary
+├── GOVERNANCE.md.template      # How the charter itself is owned & maintained
 │
 ├── .claude/
 │   ├── INDEX.json.template             # Manifest of .claude artifacts
