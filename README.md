@@ -66,6 +66,7 @@ anvil/
 │       └── progress.txt                # Append-only learnings log
 │
 ├── docs/
+│   ├── DECISION_FRAMEWORK.md           # Which AI pattern for which task
 │   ├── SKILL_AUTHORING_GUIDE.md        # How to write skills
 │   └── ADR.md.template                 # Architecture decision record
 │

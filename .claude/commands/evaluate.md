@@ -1,6 +1,7 @@
 # /evaluate
 
 Evaluate which AI-development pattern best fits a given task.
+Reference: `docs/DECISION_FRAMEWORK.md`.
 
 Analyze the task and recommend an approach:
 
