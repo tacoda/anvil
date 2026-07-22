@@ -5,6 +5,9 @@ project. Extracted and generalized from working demos.
 
 Copy the pieces you need into your project, then fill in the `[BRACKETS]`.
 
+New here? **[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)** shows how all the
+pieces fit together in five diagrams.
+
 ## What's here
 
 ```
@@ -67,6 +70,7 @@ anvil/
 │       └── progress.txt                # Append-only learnings log
 │
 ├── docs/
+│   ├── ARCHITECTURE.md                 # How the pieces fit (mermaid diagrams)
 │   ├── DECISION_FRAMEWORK.md           # Which AI pattern for which task
 │   ├── ADOPTION.md                     # Incremental rollout cadence
 │   ├── SKILL_AUTHORING_GUIDE.md        # How to write skills
