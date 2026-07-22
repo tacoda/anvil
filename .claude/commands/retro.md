@@ -27,4 +27,8 @@ Review what happened and give structured feedback:
    - e.g., "Save the dashboard spec as `templates/dashboard.md`."
    - e.g., "Add an error-handling principle to the API skill."
 
+6. **Log it**: Append a row to `.claude/pattern-log.md` — task, pattern used,
+   result, what worked, what to improve — so the signal accrues session over
+   session.
+
 Keep it brief and actionable — not a lengthy report.
