@@ -114,3 +114,31 @@ All concrete, filled-in examples live under `examples/`. Everything under
 4. Pick an orchestration pattern from `orchestration/` when a task is too big
    for one context. Use `.claude/commands/evaluate.md` (`/evaluate`) if unsure
    which pattern fits.
+
+## Copy by scenario
+
+You don't copy all of anvil — you copy the section that matches what you're
+doing. Each row is a goal, the paths it needs, and the component it maps to in
+[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) (§6). Start with the **Baseline**
+row; add rows as the need appears.
+
+| I want to… | Copy these | Component |
+|------------|-----------|-----------|
+| **Baseline** — establish project conventions | `CLAUDE.md.template` · `GLOSSARY.md.template` · `.claude/settings.json.template` | Context & config |
+| Spec-driven a single feature | `SPEC.md.template` (with the Baseline above) | Context |
+| Vibe-code a prototype fast | `PROMPT.md.template` · browse `examples/prompts/` | Context |
+| Add repeatable slash commands | `.claude/commands/` (usable as-is) | Reusable behaviors |
+| Encode expertise as a skill | `.claude/skills/SKILL.md.template` · `docs/SKILL_AUTHORING_GUIDE.md` · `examples/skills/` | Reusable behaviors |
+| Connect external data/tools (MCP) | `.claude/settings.mcp.json.template` · `examples/mcp-server/` | Config + reference |
+| Auto-format / guard commands | `.claude/settings.hooks.json.template` · `.claude/hooks/` | Config |
+| Run a big multi-step task | `orchestration/` — pick a pattern with `/evaluate` | Orchestration |
+| Autonomous iteration loop | `orchestration/ralph/` | Orchestration |
+| Multi-agent feature (layers) | `.claude/agents/AGENT.md.template` · `orchestration/orchestrate.md.template` · `examples/agents/` | Behaviors + orchestration |
+| Large phased refactor | `orchestration/migration-plan.md.template` · `examples/plans/` | Orchestration |
+| Path-scoped guardrails | `.claude/rules/` · `examples/rules/` | Context |
+| Track quality, debt, learning | `.claude/pattern-log.md.template` · `.claude/debt-ledger.md.template` · `.claude/evals/` | Decision & feedback |
+| Pick the right AI pattern | `docs/DECISION_FRAMEWORK.md` · `.claude/commands/evaluate.md` | Decision & feedback |
+| Open-source the repo | `GOVERNANCE.md.template` · `CONTRIBUTING.md.template` · `CODE_OF_CONDUCT.md.template` · `SECURITY.md.template` | Governance & community |
+| Record architecture decisions | `docs/ADR.md.template` | Decision & feedback |
+
+Copy the destination name (drop `.template`) and fill in the `[BRACKETS]`.
