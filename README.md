@@ -23,6 +23,7 @@ anvil/
 │   ├── INDEX.json.template             # Manifest of .claude artifacts
 │   ├── MEMORY.md.template              # Durable cross-session project memory
 │   ├── debt-ledger.md.template         # Tracked, prioritized debt
+│   ├── pattern-log.md.template         # Which AI patterns work, session over session
 │   ├── settings.json.template          # Model, permissions, context config
 │   ├── settings.mcp.json.template      # MCP server registration
 │   ├── settings.hooks.json.template    # Hook wiring (auto-lint, guards)

@@ -1,0 +1,32 @@
+# Pattern Log
+
+Track which AI-development patterns work for you. Fill in a row after each
+session. Over time you'll see which patterns you reach for most and which need
+refinement. Pairs with `docs/DECISION_FRAMEWORK.md` (which pattern to pick) and
+`.claude/commands/retro.md` (`/retro`, which feeds this log).
+
+Patterns: **Vibe Coding · Skills+Commands · MCP · Ralph/Tasks · Multi-Phase ·
+Subagents · Swarms · Agent Teams · AI Testing** (see the decision framework).
+
+| Date | Task | Pattern used | Result (Great/Good/Meh/Bad) | What worked | What to improve |
+|------|------|--------------|-----------------------------|-------------|-----------------|
+| [2026-01-01] | [dashboard prototype] | [Vibe Coding] | [Great] | [saved spec as template] | [tighten color constraints] |
+|      |      |              |                             |             |                 |
+
+## Templates saved
+
+When a session produces something reusable, promote it to a template and log it
+here so it doesn't get lost.
+
+| Date | Name | Type (spec/skill/command/agent/rule) | Location | Notes |
+|------|------|--------------------------------------|----------|-------|
+| [2026-01-01] | [api-design] | [skill] | [.claude/skills/api-design/] | [extracted from review comments] |
+|      |      |                                      |          |       |
+
+## Insights
+
+Capture cross-session patterns you notice over time:
+
+- [e.g., "Ralph loop beats subagents when the spec is a single utility."]
+-
+-
