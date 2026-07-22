@@ -142,3 +142,7 @@ row; add rows as the need appears.
 | Record architecture decisions | `docs/ADR.md.template` | Decision & feedback |
 
 Copy the destination name (drop `.template`) and fill in the `[BRACKETS]`.
+
+## License
+
+[MIT](LICENSE) © Ian Johnson
