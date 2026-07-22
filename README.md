@@ -68,6 +68,7 @@ anvil/
 │
 ├── docs/
 │   ├── DECISION_FRAMEWORK.md           # Which AI pattern for which task
+│   ├── ADOPTION.md                     # Incremental rollout cadence
 │   ├── SKILL_AUTHORING_GUIDE.md        # How to write skills
 │   └── ADR.md.template                 # Architecture decision record
 │
