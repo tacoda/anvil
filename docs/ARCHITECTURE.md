@@ -10,6 +10,7 @@ rest zoom into one region of it.
 - [3. Patterns → templates → examples](#3-patterns--templates--examples) — pick a pattern, fill a template, learn from an example
 - [4. Orchestration internals](#4-orchestration-internals) — how the four multi-step patterns actually run
 - [5. Project scaffolding](#5-project-scaffolding) — governance, community, and decision records
+- [6. Component boundaries](#6-component-boundaries) — which files and folders own which concept
 
 ---
 
@@ -195,3 +196,90 @@ flowchart TB
     C -. points reviewers to .-> ADR
     G -. owns .-> DEBT
 ```
+
+---
+
+## 6. Component boundaries
+
+The diagrams above are conceptual. This is where those concepts live on disk —
+seven components, each owning a distinct set of paths. The boundary rule: a file
+belongs to exactly one component, and components talk to each other only through
+the edges shown below (config *enables* behaviors; context *feeds* orchestration;
+examples *model* both). Nothing reaches across a boundary into another
+component's internals.
+
+```mermaid
+flowchart TB
+    subgraph CTX["Context & memory — what Claude reads"]
+        direction TB
+        X1["CLAUDE.md · SPEC.md · PROMPT.md"]
+        X2["GLOSSARY.md · AGENTS.md"]
+        X3[".claude/MEMORY.md"]
+        X4[".claude/rules/ · .claude/features/ · .claude/plans/"]
+    end
+    subgraph CFG["Harness config — how Claude runs"]
+        direction TB
+        F1[".claude/settings.json"]
+        F2[".claude/settings.mcp.json"]
+        F3[".claude/settings.hooks.json · .claude/hooks/"]
+        F4[".claude/INDEX.json"]
+    end
+    subgraph BEH["Reusable behaviors — invokable units"]
+        direction TB
+        B1[".claude/skills/"]
+        B2[".claude/commands/"]
+        B3[".claude/agents/"]
+    end
+    subgraph ORC["Orchestration — multi-step drivers"]
+        direction TB
+        O1["orchestration/orchestrate.md"]
+        O2["orchestration/TASKS.md"]
+        O3["orchestration/migration-plan.md"]
+        O4["orchestration/ralph/"]
+    end
+    subgraph FB["Decision & feedback — steer + learn"]
+        direction TB
+        D1["docs/DECISION_FRAMEWORK.md · ADOPTION.md"]
+        D2["docs/ARCHITECTURE.md · SKILL_AUTHORING_GUIDE.md · ADR.md"]
+        D3[".claude/pattern-log.md · .claude/debt-ledger.md"]
+        D4[".claude/evals/"]
+    end
+    subgraph GOV["Governance & community — project health"]
+        direction TB
+        G1["GOVERNANCE.md · CONTRIBUTING.md"]
+        G2["CODE_OF_CONDUCT.md · SECURITY.md"]
+    end
+    subgraph EX["Reference — filled instances (copy nothing verbatim)"]
+        direction TB
+        E1["examples/skills · agents · rules"]
+        E2["examples/specs · prompts · plans"]
+        E3["examples/orchestration · mcp-server"]
+    end
+    CTX --> BEH
+    CTX --> ORC
+    CFG -. enables .-> BEH
+    BEH --> FB
+    ORC --> FB
+    EX -. models .-> BEH
+    EX -. models .-> ORC
+    GOV -. frames .-> CTX
+```
+
+### Ownership table
+
+Precise boundary: every path in the repo, the one component that owns it, and
+the conceptual diagram it serves.
+
+| Component | Owns these paths | Concept it implements | Diagram |
+|-----------|------------------|-----------------------|---------|
+| **Context & memory** | `CLAUDE.md` · `SPEC.md` · `PROMPT.md` · `GLOSSARY.md` · `AGENTS.md` · `.claude/MEMORY.md` · `.claude/rules/` · `.claude/features/` · `.claude/plans/` | What Claude reads, and when | 2 |
+| **Harness config** | `.claude/settings.json` · `.claude/settings.mcp.json` · `.claude/settings.hooks.json` · `.claude/hooks/` · `.claude/INDEX.json` | How the harness behaves | 2 |
+| **Reusable behaviors** | `.claude/skills/` · `.claude/commands/` · `.claude/agents/` | Invokable units (skills, commands, subagents) | 3, 4 |
+| **Orchestration** | `orchestration/orchestrate.md` · `orchestration/TASKS.md` · `orchestration/migration-plan.md` · `orchestration/ralph/` | Multi-step patterns (subagents, swarm, phases, Ralph) | 3, 4 |
+| **Decision & feedback** | `docs/DECISION_FRAMEWORK.md` · `docs/ADOPTION.md` · `docs/ARCHITECTURE.md` · `docs/SKILL_AUTHORING_GUIDE.md` · `docs/ADR.md` · `.claude/pattern-log.md` · `.claude/debt-ledger.md` · `.claude/evals/` | Steer the choice, learn from the result | 1, 5 |
+| **Governance & community** | `GOVERNANCE.md` · `CONTRIBUTING.md` · `CODE_OF_CONDUCT.md` · `SECURITY.md` | Project health, non-AI | 5 |
+| **Reference** | `examples/**` | Filled instances of every template | 3 |
+
+> **Note on `*.template`:** everything under a component keeps its `.template`
+> suffix in anvil and is renamed on copy into a real project (`CLAUDE.md.template`
+> → `CLAUDE.md`). The boundaries above use the destination names.
